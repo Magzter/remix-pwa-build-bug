@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .font-outline-1 {
+        text-shadow:
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black,
+                1px 1px 0 black;
+    }
+    .font-outline-2 {
+        -webkit-text-stroke: 2px black;
+    }
+    .font-outline-4 {
+        -webkit-text-stroke: 4px black;
+    }
+
+    @property --num {
+        syntax: "<integer>";
+        initial-value: 0;
+        inherits: false;
+    }
+
+    @property --num-transactions {
+        syntax: "<integer>";
+        initial-value: 0;
+        inherits: false;
+    }
+
+    @property --num-assets {
+        syntax: "<integer>";
+        initial-value: 0;
+        inherits: false;
+    }
+
+    @property --num-users {
+        syntax: "<integer>";
+        initial-value: 0;
+        inherits: false;
+    }
+
+    @keyframes counter {
+        from {
+            --num-transactions: 0;
+            --num-assets: 0;
+            --num-users: 0;
+        }
+        to {
+            --num-transactions: 44;
+            --num-assets: 119;
+            --num-users: 4600;
+        }
+    }
+
+    .small-table {
+
+    }
+}
